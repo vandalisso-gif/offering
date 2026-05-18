@@ -71,8 +71,10 @@
 </div>
 <script>
 const BIN_ID = '6a0aacf8adc21f119ab80a83';
-const API_KEY = '$2a$10$TW4e.7Ee34VDfVr4LMtHse8HMFdex1P0/deBUOBc.OqyoHmVYJ9Fq';
+const MASTER_KEY = '$2a$10$TW4e.7Ee34VDfVr4LMtHse8HMFdex1P0/deBUOBc.OqyoHmVYJ9Fq';
+const ACCESS_KEY = '$2a$10$Ma/1WLcKn5sqyNAh.zBl/uJeyeG7PbpB/20EgiVneLBgg66h4UjD6';
 const BASE_URL = 'https://api.jsonbin.io/v3/b/' + BIN_ID;
+
 const ITEMS = [
   { key: 'mass',          icon: '⛪', name: '미사 참례',        unit: '회' },
   { key: 'rosary',        icon: '📿', name: '묵주기도',          unit: '단' },
@@ -81,12 +83,16 @@ const ITEMS = [
   { key: 'sacrifice',     icon: '🤝', name: '희생, 봉사',        unit: '회' },
   { key: 'priest_prayer', icon: '✝️',  name: '사제를 위한 기도',  unit: '회' },
 ];
+
 let counts = {};
 let isSaving = false;
+let pendingSave = false;
 
 async function loadCounts() {
   try {
-    const res = await fetch(BASE_URL + '/latest', { headers: { 'X-Master-Key': API_KEY } });
+    const res = await fetch(BASE_URL + '/latest', {
+      headers: { 'X-Master-Key': MASTER_KEY, 'X-Access-Key': ACCESS_KEY }
+    });
     const data = await res.json();
     counts = data.record;
     renderGrid();
@@ -97,16 +103,21 @@ async function loadCounts() {
 }
 
 async function saveCounts() {
-  if (isSaving) return;
+  if (isSaving) { pendingSave = true; return; }
   isSaving = true;
   try {
     await fetch(BASE_URL, {
       method: 'PUT',
-      headers: { 'Content-Type': 'application/json', 'X-Master-Key': API_KEY },
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Master-Key': MASTER_KEY,
+        'X-Access-Key': ACCESS_KEY
+      },
       body: JSON.stringify(counts)
     });
   } catch(e) {}
   isSaving = false;
+  if (pendingSave) { pendingSave = false; saveCounts(); }
 }
 
 function updateTotal() {
