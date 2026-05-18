@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>최재관 암브로시오 신부님께 드리는 영적예물</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #b8975a; --gold-pale: #f5ecd7; --cream: #faf7f2;
+    --warm-white: #fffef9; --brown-deep: #2c1f0e; --brown-mid: #5c3d1e;
+    --brown-soft: #8a6440; --border: rgba(184,151,90,0.25); --border-strong: rgba(184,151,90,0.5);
+  }
+  body { font-family: 'Noto Sans KR', sans-serif; background-color: var(--cream); color: var(--brown-deep); min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(184,151,90,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(184,151,90,0.04) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none; z-index: 0; }
+  .container { position: relative; z-index: 1; width: 100%; max-width: 560px; padding: 3rem 1.5rem 4rem; }
+  header { text-align: center; margin-bottom: 3rem; }
+  .cross-symbol { font-size: 28px; color: var(--gold); margin-bottom: 1.2rem; display: block; letter-spacing: 4px; }
+  .subtitle { font-family: 'Noto Serif KR', serif; font-size: 12px; font-weight: 300; color: var(--brown-soft); letter-spacing: 0.25em; margin-bottom: 0.75rem; }
+  h1 { font-family: 'Noto Serif KR', serif; font-size: 22px; font-weight: 400; color: var(--brown-deep); line-height: 1.5; }
+  .divider { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 1.5rem auto 0; }
+  .total-card { background: var(--warm-white); border: 1px solid var(--border-strong); border-radius: 4px; padding: 2rem 1.5rem; text-align: center; margin-bottom: 2rem; position: relative; overflow: hidden; }
+  .total-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .total-label { font-size: 11px; font-weight: 300; color: var(--brown-soft); letter-spacing: 0.2em; margin-bottom: 0.75rem; }
+  .total-number { font-family: 'Noto Serif KR', serif; font-size: 56px; font-weight: 300; color: var(--brown-deep); line-height: 1; transition: all 0.3s ease; }
+  .total-number.bump { transform: scale(1.06); color: var(--gold); }
+  .total-suffix { font-size: 14px; color: var(--brown-soft); margin-top: 0.4rem; font-weight: 300; }
+  .items-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .item-card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 4px; padding: 1.25rem 1rem; cursor: pointer; transition: all 0.2s ease; position: relative; overflow: hidden; user-select: none; -webkit-tap-highlight-color: transparent; }
+  .item-card:hover { border-color: var(--border-strong); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(184,151,90,0.12); }
+  .item-card:active { transform: scale(0.98); box-shadow: none; }
+  .item-card.flash { border-color: var(--gold); background: var(--gold-pale); }
+  .item-icon { font-size: 20px; margin-bottom: 0.6rem; display: block; }
+  .item-name { font-size: 13px; font-weight: 400; color: var(--brown-mid); margin-bottom: 0.75rem; line-height: 1.4; min-height: 2.8em; display: flex; align-items: flex-end; }
+  .item-count-row { display: flex; align-items: baseline; gap: 3px; }
+  .item-count { font-family: 'Noto Serif KR', serif; font-size: 28px; font-weight: 300; color: var(--brown-deep); transition: color 0.2s; }
+  .item-card.flash .item-count { color: var(--gold); }
+  .item-unit { font-size: 11px; color: var(--brown-soft); font-weight: 300; }
+  .plus-badge { position: absolute; top: 10px; right: 10px; background: var(--gold); color: white; font-size: 10px; font-weight: 500; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; transform: scale(0.5); transition: all 0.15s ease; }
+  .plus-badge.show { opacity: 1; transform: scale(1); }
+  footer { text-align: center; margin-top: 2.5rem; }
+  .footer-note { font-size: 11px; color: var(--brown-soft); font-weight: 300; letter-spacing: 0.05em; opacity: 0.7; }
+  .status-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); margin-right: 5px; vertical-align: middle; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .msg { text-align: center; color: var(--brown-soft); font-size: 13px; padding: 1rem; grid-column: 1/-1; }
+  @media (max-width: 360px) { .items-grid { grid-template-columns: 1fr; } .total-number { font-size: 44px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <span class="cross-symbol">✝</span>
+    <p class="subtitle">영적예물</p>
+    <h1>최재관 암브로시오 신부님께</h1>
+    <div class="divider"></div>
+  </header>
+  <div class="total-card">
+    <div class="total-label">전체 영적예물 합계</div>
+    <div class="total-number" id="total-num">—</div>
+    <div class="total-suffix">회</div>
+  </div>
+  <div class="items-grid" id="items-grid">
+    <div class="msg">불러오는 중...</div>
+  </div>
+  <footer>
+    <p class="footer-note"><span class="status-dot"></span>누르면 바로 전체 집계에 반영됩니다</p>
+  </footer>
+</div>
+<script>
+const BIN_ID = '6a0aacf8adc21f119ab80a83';
+const API_KEY = '$2a$10$TW4e.7Ee34VDfVr4LMtHse8HMFdex1P0/deBUOBc.OqyoHmVYJ9Fq';
+const BASE_URL = 'https://api.jsonbin.io/v3/b/' + BIN_ID;
+const ITEMS = [
+  { key: 'mass',          icon: '⛪', name: '미사 참례',        unit: '회' },
+  { key: 'rosary',        icon: '📿', name: '묵주기도',          unit: '단' },
+  { key: 'hail_mary',     icon: '🌸', name: '주모경',            unit: '번' },
+  { key: 'arrow_prayer',  icon: '🙏', name: '화살기도',          unit: '회' },
+  { key: 'sacrifice',     icon: '🤝', name: '희생, 봉사',        unit: '회' },
+  { key: 'priest_prayer', icon: '✝️',  name: '사제를 위한 기도',  unit: '회' },
+];
+let counts = {};
+let isSaving = false;
+
+async function loadCounts() {
+  try {
+    const res = await fetch(BASE_URL + '/latest', { headers: { 'X-Master-Key': API_KEY } });
+    const data = await res.json();
+    counts = data.record;
+    renderGrid();
+    updateTotal();
+  } catch(e) {
+    document.getElementById('items-grid').innerHTML = '<div class="msg">데이터를 불러오지 못했습니다. 새로고침 해주세요.</div>';
+  }
+}
+
+async function saveCounts() {
+  if (isSaving) return;
+  isSaving = true;
+  try {
+    await fetch(BASE_URL, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json', 'X-Master-Key': API_KEY },
+      body: JSON.stringify(counts)
+    });
+  } catch(e) {}
+  isSaving = false;
+}
+
+function updateTotal() {
+  const total = Object.values(counts).reduce((a, b) => a + b, 0);
+  const el = document.getElementById('total-num');
+  el.textContent = total.toLocaleString();
+  el.classList.add('bump');
+  setTimeout(() => el.classList.remove('bump'), 300);
+}
+
+function renderGrid() {
+  const grid = document.getElementById('items-grid');
+  grid.innerHTML = '';
+  ITEMS.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'item-card';
+    card.id = 'card-' + item.key;
+    card.innerHTML = `
+      <span class="item-icon">${item.icon}</span>
+      <div class="item-name">${item.name}</div>
+      <div class="item-count-row">
+        <span class="item-count" id="count-${item.key}">${(counts[item.key] || 0).toLocaleString()}</span>
+        <span class="item-unit">${item.unit}</span>
+      </div>
+      <div class="plus-badge" id="badge-${item.key}">+1</div>
+    `;
+    card.addEventListener('click', () => handleClick(item.key));
+    grid.appendChild(card);
+  });
+}
+
+function handleClick(key) {
+  counts[key] = (counts[key] || 0) + 1;
+  document.getElementById('count-' + key).textContent = counts[key].toLocaleString();
+  updateTotal();
+  const card = document.getElementById('card-' + key);
+  const badge = document.getElementById('badge-' + key);
+  card.classList.add('flash');
+  badge.classList.add('show');
+  setTimeout(() => { card.classList.remove('flash'); badge.classList.remove('show'); }, 600);
+  saveCounts();
+}
+
+loadCounts();
+</script>
+</body>
+</html>
